@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper show-category">
+      <div class="screen-backdrop"></div>
+      <div class="screen home-screen">
+        <div class="head-wrapper">
+          <div class="menu-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="50"
+              height="50"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+              ></path>
+            </svg>
+          </div>
+
+          <div class="welcome">
+            <div class="content">
+              <h1>Hello John!</h1>
+              <p>Today you have <span class="totalTasks"></span> tasks</p>
+            </div>
+            <div class="img">
+              <div class="backdrop"></div>
+              <img src="images/boy.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- categories -->
+        <div class="categories-wrapper">
+          <div class="categories">
+            <div class="category"></div>
+          </div>
+        </div>
+      </div>
+      <!-- task screen -->
+      <div class="screen category-screen">
+        <div class="head-wrapper">
+          <div class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 2048">
+              <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"
+              />
+            </svg>
+          </div>
+          <div class="options">
+            <svg
+              width="100%"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 2048"
+            >
+              <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+              <path
+                d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="category-details">
+          <img src="images/boy.png" alt="" id="category-img" />
+          <div class="details">
+            <p class="category-tasks">8 tasks</p>
+            <h1 class="category-title">Personal</h1>
+          </div>
+        </div>
+        <div class="tasks-wrapper">
+          <div class="tasks">
+            <div class="task-wrapper">
+              <label for="task" class="task">
+                <input type="checkbox" name="" id="task" />
+                <span class="checkmark">
+                  <svg
+                    fill="#000000"
+                    height="200px"
+                    width="200px"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 490 490"
+                    xml:space="preserve"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <polygon
+                        points="452.253,28.326 197.831,394.674 29.044,256.875 0,292.469 207.253,461.674 490,54.528 "
+                      ></polygon>
+                    </g>
+                  </svg>
+                </span>
+                <p>Buy a new car</p>
+              </label>
+              <div class="delete">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M 15 4 C 14.476563 4 13.941406 4.183594 13.5625 4.5625 C 13.183594 4.941406 13 5.476563 13 6 L 13 7 L 7 7 L 7 9 L 8 9 L 8 25 C 8 26.644531 9.355469 28 11 28 L 23 28 C 24.644531 28 26 26.644531 26 25 L 26 9 L 27 9 L 27 7 L 21 7 L 21 6 C 21 5.476563 20.816406 4.941406 20.4375 4.5625 C 20.058594 4.183594 19.523438 4 19 4 Z M 15 6 L 19 6 L 19 7 L 15 7 Z M 10 9 L 24 9 L 24 25 C 24 25.554688 23.554688 26 23 26 L 11 26 C 10.445313 26 10 25.554688 10 25 Z M 12 12 L 12 23 L 14 23 L 14 12 Z M 16 12 L 16 23 L 18 23 L 18 12 Z M 20 12 L 20 23 L 22 23 L 22 12 Z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- add task btn -->
+        <div class="add-task-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+        </div>
+        <!-- backdrop -->
+        <div class="black-backdrop"></div>
+        <!-- add task form -->
+        <div class="add-task">
+          <div class="add-task-backdrop"></div>
+          <h1 class="heading">Add Task</h1>
+          <div class="input-group">
+            <label for="task-input">Task</label>
+            <input type="text" id="task-input" required />
+          </div>
+          <div class="input-group">
+            <label for="category-select">Category</label>
+            <select name="" id="category-select">
+              <option value="personal">Personal</option>
+            </select>
+            <div class="btns">
+              <button class="cancel-btn">Cancel</button>
+              <button class="add-btn">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
